@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Score</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="score-container">
+        <div class="total-score">Your total score is: {{ score }}</div>
+        {% if incorrect_answers %}
+        <div class="incorrect-answers">
+            <div class="incorrect-answer-header">Incorrect answers:</div>
+            {% for answer in incorrect_answers %}
+            <div class="incorrect-answer">
+                Question {{ answer.question_number }}: <br>{{ answer.question }} <br> Correct answer: {{ answer.correct_option }} <br> Explaination: {{ answer.explaination }}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="incorrect-answers">
+            You got all the answers correct!
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
