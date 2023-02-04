@@ -27,7 +27,8 @@ def score():
     score = result[0]
     incorrect_answers = result[1:]
     return render_template("score.html", score=score, incorrect_answers=incorrect_answers)
-
+ 
+ 
 
 '''def score():
     quiz = run_quiz("questions.xlsx")
