@@ -19,7 +19,7 @@ def read_excel_file(file_path):
         })
     return quiz
 
-def display_quiz(quiz):
+def display_quiz(quiz,):
     quiz_data = []
     for index, q in enumerate(quiz):
         question = {
@@ -36,7 +36,7 @@ def display_score(quiz, answers):
     score = 0
     incorrect_answers = []
     for index, q in enumerate(quiz):
-        if answers[index] and answers[index] == q['correct_option']:
+        if answers[index] == q['correct_option']:
             score += 1
         else:
             incorrect_answer = {
@@ -47,9 +47,8 @@ def display_score(quiz, answers):
                 "explaination": q['explaination']
             }
             incorrect_answers.append(incorrect_answer)
-    return score, incorrect_answers
-
-
+    percentage = (score / len(quiz)) * 100
+    return percentage, incorrect_answers
 
 def run_quiz(file_path):
     quiz = read_excel_file(file_path)

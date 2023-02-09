@@ -1,11 +1,26 @@
 body {
-    background-color: lightgray;
+    background-color: rgb(250, 249, 249);
+}
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+}
+.h1 {
+    text-align: center;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .quiz-container {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-top: 50px;
+
 }
 .question {
     font-size: 18px;
@@ -30,7 +45,7 @@ input[type="radio"] {
 input[type="submit"] {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: lightblue;
+    background-color: rgb(14, 248, 61);
     border: none;
     border-radius: 5px;
     cursor: pointer;
