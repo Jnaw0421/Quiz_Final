@@ -12,7 +12,7 @@
             <div class="incorrect-answer-header">Incorrect answers:</div>
             {% for answer in incorrect_answers %}
             <div class="incorrect-answer">
-                Question {{ answer.question_number }}: <br>{{ answer.question }} <br> Correct answer: {{ answer.correct_option }} <br> Explaination: {{ answer.explaination }}
+                Question {{ answer.question_number }}: <br>{{ answer.question }} <br> Selected: {{ answer.selected_option }} <br> Correct answer: {{ answer.correct_answer }} <br> Explaination: {{ answer.explaination }}
             </div>
             {% endfor %}
         </div>

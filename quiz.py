@@ -40,6 +40,7 @@ def display_score(quiz, answers):
             score += 1
         else:
             incorrect_answer = {
+                "question_number": [index +1],
                 "question": q['question'],
                 "incorrect_answer": answers[index],
                 "selected_option": answers[index],
@@ -48,7 +49,7 @@ def display_score(quiz, answers):
             }
             incorrect_answers.append(incorrect_answer)
     percentage = (score / len(quiz)) * 100
-    return percentage, incorrect_answers
+    return (int(percentage)), incorrect_answers
 
 def run_quiz(file_path):
     quiz = read_excel_file(file_path)

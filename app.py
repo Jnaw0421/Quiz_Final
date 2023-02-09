@@ -17,17 +17,15 @@ def quiz():
 @quiz_blueprint.route("/score", methods=["GET", "POST"])
 def score():
     quiz = run_quiz("questions.xlsx")
-    print(request.form)
     answers = []
     correct_answer = []
+    selected_answer =[]
     for i in range(len(quiz)):
         answer = request.form.get(f'{quiz[i]["question"]}')
         answers.append(answer)
-        print(answers)
         correct_answer = request.form.getlist(f'correct_option{i}')
         correct_answer.append(correct_answer)
     result = display_score(quiz, answers)
-    print(result)
     score = result[0]
     incorrect_answers = result[1]
     return render_template("score.html", score=score, incorrect_answers=incorrect_answers)

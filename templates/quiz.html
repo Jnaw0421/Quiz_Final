@@ -11,7 +11,7 @@
                     {% for question in quiz %}
                     <div class="question">{{ loop.index }}. {{ question.question }}</div>
                     <div class="answers">
-                        {% for answer in question.options %}
+                        {% for answer in question['options'] %}
                         <div class="answer">
                             <input type="radio" id="{{ answer }}" name="{{ question.question }}" value="{{ answer }}">
                             <label for="{{ answer }}">{{ answer }}</label>
