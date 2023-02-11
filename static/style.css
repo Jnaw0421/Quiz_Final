@@ -1,21 +1,44 @@
-body {
-    background-color: rgb(250, 249, 249);
+:root{
+    background-color: #34495e;
+    font-size: 62.5%;
+    margin: 0;
 }
-.welcome-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 10%;
+
+*{
+    box-sizing: border-box;
+    font-family:'Fira Code', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #7ed6df;
+    
 }
-.h1 {
-    text-align: center;
-    position: absolute;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+h1,
+h2,
+h3,
+h4{
+    margin-bottom: 1rem;
 }
+h1{
+    font-size: 5.4rem;
+    color: #ffffff;
+    margin-bottom: 5rem;
+}
+
+h1 >span{
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+h2{
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
 .quiz-container {
     display: flex;
     flex-direction: column;
@@ -35,6 +58,12 @@ body {
 .answer {
     margin-bottom: 10px;
 }
+button{
+    background-color: #34495e;
+    border: none;
+    font-size: 62.5%;
+    margin: 0;
+}
 label {
     font-size: 16px;
     text-align: left;
@@ -43,12 +72,23 @@ input[type="radio"] {
     margin-right: 10px;
 }
 input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: rgb(14, 248, 61);
+    margin-top: 30px;
+    padding: 30px 40px;
+    background-color: rgb(105, 25, 85);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    text-align: center;
+}
+input[type="retake"] {
+    margin-top: 30px;
+    padding: 20px 30px;
+    background-color: rgb(25, 33, 105);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+
 }
 .score-container {
     display: flex;
@@ -70,3 +110,18 @@ input[type="submit"] {
 .incorrect-answer {
     margin-bottom: 10px;
 }
+
+/*BUTTONS*/
+input{
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86,158,235,0.5);
+}
+
+input::placeholder{
+    color: #aaa;
+}
+

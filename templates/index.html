@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
     <title>Quiz</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
+&nbsp
 <body>
   <div class="welcome-container">
-    <h1> Welcome to the Quiz!
-    <p>Click the button below to start the quiz.</p>
+    &nbsp
+    <center><h1> Welcome to the AWS Services Quiz!
+      <center><font size="7">Click the button below to start.</font></center>
+      <font size="5">Try to answer the folowing AWS Services questions to the best of your ability</font>
     <form action="{{ url_for('quiz.quiz') }}" method="get">
       <input type="submit" value="Start Quiz">
     </h1>

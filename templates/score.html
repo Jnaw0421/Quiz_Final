@@ -6,13 +6,13 @@
 </head>
 <body>
     <div class="score-container">
-        <div class="total-score">Your total score is: {{ score }}%</div>
+        <h1>Answers explained below</h1>
         {% if incorrect_answers %}
         <div class="incorrect-answers">
-            <div class="incorrect-answer-header">Incorrect answers:</div>
+            <div class="incorrect-answer-header">Answers:</div>
             {% for answer in incorrect_answers %}
             <div class="incorrect-answer">
-                Question {{ answer.question_number }}: <br>{{ answer.question }} <br> Selected: {{ answer.selected_option }} <br> Correct answer: {{ answer.correct_answer }} <br> Explaination: {{ answer.explaination }}
+                Question {{ answer.question_number }}: <br>{{ answer.question }}<br> Correct answer: {{ answer.correct_answer }} <br> Explaination: {{ answer.explaination }}
             </div>
             {% endfor %}
         </div>

@@ -2,14 +2,18 @@
 <html>
 <head>
     <title>Quiz</title>
+    <br>
+    <center><h1>You can do this!</h1></center>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <form action="{{ url_for('quiz.score') }}" method="post">
+        <form action="{{ url_for('quiz.total') }}" method="post">
             <div class="quiz-container">
                 <div class="quiz-container">
+                    <br>
                     {% for question in quiz %}
-                    <div class="question">{{ loop.index }}. {{ question.question }}</div>
+                    <br>
+                    <br><br><div class="question">{{ loop.index }}. {{ question.question }}</div>
                     <div class="answers">
                         {% for answer in question['options'] %}
                         <div class="answer">
@@ -20,7 +24,7 @@
                 </div>
                 {% endfor %}
             </div>
-            <input type="submit" value="Submit">
+            <center><input type="submit" value="Submit"></center>
         </form>
     </body>
     </html>
