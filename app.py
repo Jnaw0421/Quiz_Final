@@ -19,7 +19,6 @@ def score():
     quiz = run_quiz("questions.xlsx")
     answers = []
     correct_answer = []
-    selected_answer =[]
     for i in range(len(quiz)):
         answer = request.form.get(f'{quiz[i]["question"]}')
         answers.append(answer)
