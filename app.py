@@ -13,6 +13,20 @@ def quiz():
     quiz_data = run_quiz("questions.xlsx")
     return render_template('quiz.html', quiz=quiz_data)
 
+@quiz_blueprint.route("/total", methods=["GET", "POST"])
+def total():
+    quiz = run_quiz("questions.xlsx")
+    answers = []
+    correct_answer = []
+    for i in range(len(quiz)):
+        answer = request.form.get(f'{quiz[i]["question"]}')
+        answers.append(answer)
+        correct_answer = request.form.getlist(f'correct_option{i}')
+        correct_answer.append(correct_answer)
+    result = display_score(quiz, answers)
+    score = result[0]
+    incorrect_answers = result[1]
+    return render_template("total.html", score=score, incorrect_answers=incorrect_answers)
     
 @quiz_blueprint.route("/score", methods=["GET", "POST"])
 def score():
